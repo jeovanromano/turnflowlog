@@ -1,0 +1,80 @@
++ + cut -f1 -d.
++ basename /etlsys/pce/Scripts//startworkflow.sh
+script=startworkflow
++ + date +%Y%m%d%H%M%S
+data_exec=20161020114326
++ + date +%Y%m%d
+data_atual=20161020
++ . /etlsys/pce/Scripts/generico.sh
++ export Domain=D_CIELO_HOM
++ export Integration=INT_CIELO_HOM
++ export User=svcetl
++ export RepositoryService=REP_CIELO_HOM
++ + /etlapp/Informatica/9.5.1/server/bin/pmcmd startworkflow -d D_CIELO_HOM -sv INT_CIELO_HOM -u svcetl -pv PASSWORD1 -paramfile /e\
+tlsys/pce/BWParam/Funding/Retorno/wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS_341.par -wait wf_CIELO_BOB_FUN_RET_CREDITO_\
+EC_CREDITO_OUTROS_BANCOS
+log=
+Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit
+Copyright (c) Informatica Corporation 1994 - 2014
+All Rights Reserved.
+
+Invoked at Thu Oct 20 11:43:26 2016
+
+Connected to Integration Service: [INT_CIELO_HOM].
+Starting workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS]
+Waiting for workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS] to complete
+ERROR: Workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS]: Execution failed.  Please check the workflow log for more \
+information.
+Disconnecting from Integration Service
+
+Completed at Thu Oct 20 11:43:41 2016
++ + awk /ailed/,/^$/
++ echo Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 - 201\
+4 All Rights Reserved. Invoked at Thu Oct 20 11:43:26 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow [wf\
+_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS] Waiting for workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS] t\
+o complete ERROR: Workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS]: Execution failed. Please check the workflow log\
+ for more information. Disconnecting from Integration Service Completed at Thu Oct 20 11:43:41 2016
+msg_failed=Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 -\
+ 2014 All Rights Reserved. Invoked at Thu Oct 20 11:43:26 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow\
+ [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS] Waiting for workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCO\
+S] to complete ERROR: Workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS]: Execution failed. Please check the workflow\
+ log for more information. Disconnecting from Integration Service Completed at Thu Oct 20 11:43:41 2016
++ + awk /ERROR/,/^$/
++ echo Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 - 201\
+4 All Rights Reserved. Invoked at Thu Oct 20 11:43:26 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow [wf\
+_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS] Waiting for workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS] t\
+o complete ERROR: Workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS]: Execution failed. Please check the workflow log\
+ for more information. Disconnecting from Integration Service Completed at Thu Oct 20 11:43:41 2016
+msg_error=Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 - \
+2014 All Rights Reserved. Invoked at Thu Oct 20 11:43:26 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow \
+[wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS] Waiting for workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS\
+] to complete ERROR: Workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS]: Execution failed. Please check the workflow \
+log for more information. Disconnecting from Integration Service Completed at Thu Oct 20 11:43:41 2016
++ + awk /topped/,/^$/
++ echo Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 - 201\
+4 All Rights Reserved. Invoked at Thu Oct 20 11:43:26 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow [wf\
+_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS] Waiting for workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS] t\
+o complete ERROR: Workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS]: Execution failed. Please check the workflow log\
+ for more information. Disconnecting from Integration Service Completed at Thu Oct 20 11:43:41 2016
+msg_stop=
++ + awk /bort/,/^$/
++ echo Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 - 201\
+4 All Rights Reserved. Invoked at Thu Oct 20 11:43:26 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow [wf\
+_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS] Waiting for workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS] t\
+o complete ERROR: Workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS]: Execution failed. Please check the workflow log\
+ for more information. Disconnecting from Integration Service Completed at Thu Oct 20 11:43:41 2016
+msg_abort=
++ MsgExec Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 - \
+2014 All Rights Reserved. Invoked at Thu Oct 20 11:43:26 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow \
+[wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS] Waiting for workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS\
+] to complete ERROR: Workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS]: Execution failed. Please check the workflow \
+log for more information. Disconnecting from Integration Service Completed at Thu Oct 20 11:43:41 2016 Informatica(r) PMCMD, versio\
+n [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 - 2014 All Rights Reserved. Invoked at T\
+hu Oct 20 11:43:26 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDI\
+TO_OUTROS_BANCOS] Waiting for workflow [wf_CIELO_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS] to complete ERROR: Workflow [wf_CIEL\
+O_BOB_FUN_RET_CREDITO_EC_CREDITO_OUTROS_BANCOS]: Execution failed. Please check the workflow log for more information. Disconnectin\
+g from Integration Service Completed at Thu Oct 20 11:43:41 2016
+-------------------------------------------------------------------------------------------
+Execution failed. Please check the workflow log for more information.
+Final de Execucao :  20/10/2016 11:43:41
+-------------------------------------------------------------------------------------------

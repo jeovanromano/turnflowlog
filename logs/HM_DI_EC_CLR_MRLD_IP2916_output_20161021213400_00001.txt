@@ -1,0 +1,96 @@
++ + basename /etlsys/pce/Scripts//startworkflow_BOB.sh
++ cut -f1 -d.
+script=startworkflow_BOB
++ + date +%Y%m%d%H%M%S
+data_exec=20161021213419
++ + date +%Y%m%d
+data_atual=20161021
++ printf --///////////////////////////////////////////////////////////////////////////// \n--/////                   PARAMETROS FIX\
+OS - NAO ALTERAR                  ///// \n--/////////////////////////////////////////////////////////////////////////////\n\n[BOB_s\
+hd.WF:wf_CIELO_COR_CTR_PROCESS]\n$DBConnection_BOB=CN_ORCL_STAR\n$$CD_PROCESS_TYPE=
++ 1> /etlsys/pce/Scripts/Logs/wf_CIELO_COR_CTR_PROCESS_TEMP_2916.ctr
++ chmod 777 /etlsys/pce/Scripts/Logs/wf_CIELO_COR_CTR_PROCESS_TEMP_2916.ctr
++ 1> /etlsys/pce/BWParam/CTR_PROCESS/wf_CIELO_COR_CTR_PROCESS_2916.ctr
++ cat /etlsys/pce/Scripts/Logs/wf_CIELO_COR_CTR_PROCESS_TEMP_2916.ctr
++ echo 2916
++ chmod 777 /etlsys/pce/BWParam/CTR_PROCESS/wf_CIELO_COR_CTR_PROCESS_2916.ctr
++ [  = A ]
++ [  = R ]
++ echo $$CD_PROCESS_STATUS=0
++ 1>> /etlsys/pce/BWParam/CTR_PROCESS/wf_CIELO_COR_CTR_PROCESS_2916.ctr
++ . /etlsys/pce/Scripts/generico.sh
++ export Domain=D_CIELO_HOM
++ export Integration=INT_CIELO_HOM
++ export User=svcetl
++ export RepositoryService=REP_CIELO_HOM
++ /etlapp/Informatica/9.5.1/server/bin/pmcmd startworkflow -d D_CIELO_HOM -sv INT_CIELO_HOM -u svcetl -pv PASSWORD1 -f BOB_shd -run\
+insname 2916 -paramfile /etlsys/pce/BWParam/CTR_PROCESS/wf_CIELO_COR_CTR_PROCESS_2916.ctr -wait wf_CIELO_COR_CTR_PROCESS
++ 1> /etlsys/pce/Scripts/Logs/workflow_CTR_PROCESS_2916.txt
++ chmod 777 /etlsys/pce/Scripts/Logs/workflow_CTR_PROCESS_2916.txt
++ + awk /ailed/,/^$/
++ cat /etlsys/pce/Scripts/Logs/workflow_CTR_PROCESS_2916.txt
+msg_failed=ERROR: Workflow [wf_CIELO_COR_CTR_PROCESS]: Execution failed.  Please check the workflow log for more information.
+Disconnecting from Integration Service
++ + awk /ailed/,/^$/
++ cat /etlsys/pce/Scripts/Logs/workflow_2916.txt
+msg_failed_wkf=ERROR: Workflow [wf_CIELO_COR_CLR_OUTGOING_REL_RECONC_MAESTRO]: Execution failed.  Please check the workflow log for\
+ more information.
+Disconnecting from Integration Service
++ + awk /ERROR/,/^$/
++ cat /etlsys/pce/Scripts/Logs/workflow_CTR_PROCESS_2916.txt
+msg_error=ERROR: Workflow [wf_CIELO_COR_CTR_PROCESS]: Execution failed.  Please check the workflow log for more information.
+Disconnecting from Integration Service
++ + awk /ERROR/,/^$/
++ cat /etlsys/pce/Scripts/Logs/workflow_2916.txt
+msg_error_wkf=ERROR: Workflow [wf_CIELO_COR_CLR_OUTGOING_REL_RECONC_MAESTRO]: Execution failed.  Please check the workflow log for \
+more information.
+Disconnecting from Integration Service
++ + awk /topped/,/^$/
++ cat /etlsys/pce/Scripts/Logs/workflow_CTR_PROCESS_2916.txt
+msg_stop=
++ + awk /topped/,/^$/
++ cat /etlsys/pce/Scripts/Logs/workflow_2916.txt
+msg_stop_wkf=
++ rm /etlsys/pce/BWParam/CTR_PROCESS/wf_CIELO_COR_CTR_PROCESS_2916.ctr
++ rm /etlsys/pce/Scripts/Logs/wf_CIELO_COR_CTR_PROCESS_TEMP_2916.ctr
++ MsgExec 2916 ERROR: Workflow [wf_CIELO_COR_CTR_PROCESS]: Execution failed. Please check the workflow log for more information. Di\
+sconnecting from Integration Service ERROR: Workflow [wf_CIELO_COR_CTR_PROCESS]: Execution failed. Please check the workflow log fo\
+r more information. Disconnecting from Integration Service ERROR: Workflow [wf_CIELO_COR_CLR_OUTGOING_REL_RECONC_MAESTRO]: Executio\
+n failed. Please check the workflow log for more information. Disconnecting from Integration Service ERROR: Workflow [wf_CIELO_COR_\
+CLR_OUTGOING_REL_RECONC_MAESTRO]: Execution failed. Please check the workflow log for more information. Disconnecting from Integrat\
+ion Service
+-------------------------------------------------------------------------------------------
+Execution failed. Please check the workflow log for more information.
+Final de Execucao :  21/10/2016 21:37:23
+-------------------------------------------------------------------------------------------
+                                                                                           
+
+Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit
+Copyright (c) Informatica Corporation 1994 - 2014
+All Rights Reserved.
+
+Invoked at Fri Oct 21 21:34:19 2016
+
+Connected to Integration Service: [INT_CIELO_HOM].
+Starting workflow [wf_CIELO_COR_CTR_PROCESS]
+Waiting for workflow [wf_CIELO_COR_CTR_PROCESS] to complete
+ERROR: Workflow [wf_CIELO_COR_CTR_PROCESS]: Execution failed.  Please check the workflow log for more information.
+Disconnecting from Integration Service
+
+Completed at Fri Oct 21 21:37:23 2016
+                                                                                           
+
+Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit
+Copyright (c) Informatica Corporation 1994 - 2014
+All Rights Reserved.
+
+Invoked at Fri Oct 21 21:34:41 2016
+
+Connected to Integration Service: [INT_CIELO_HOM].
+Starting workflow [wf_CIELO_COR_CLR_OUTGOING_REL_RECONC_MAESTRO]
+Waiting for workflow [wf_CIELO_COR_CLR_OUTGOING_REL_RECONC_MAESTRO] to complete
+ERROR: Workflow [wf_CIELO_COR_CLR_OUTGOING_REL_RECONC_MAESTRO]: Execution failed.  Please check the workflow log for more informati\
+on.
+Disconnecting from Integration Service
+
+Completed at Fri Oct 21 21:37:15 2016

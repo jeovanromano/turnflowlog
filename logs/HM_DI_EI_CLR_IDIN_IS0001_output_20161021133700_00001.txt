@@ -1,0 +1,77 @@
++ + cut -f1 -d.
++ basename /etlsys/pce/Scripts/startworkflow.sh
+script=startworkflow
++ + date +%Y%m%d%H%M%S
+data_exec=20161021133709
++ + date +%Y%m%d
+data_atual=20161021
++ . /etlsys/pce/Scripts/generico.sh
++ export Domain=D_CIELO_HOM
++ export Integration=INT_CIELO_HOM
++ export User=svcetl
++ export RepositoryService=REP_CIELO_HOM
++ + /etlapp/Informatica/9.5.1/server/bin/pmcmd startworkflow -d D_CIELO_HOM -sv INT_CIELO_HOM -u svcetl -pv PASSWORD1 -paramfile /e\
+tlsys/pce/BWParam/Clearing/Incoming/wf_CIELO_BOB_CLR_RET_INCOMING_DINERS_RET.par -wait wf_CIELO_BOB_CLR_RET_INCOMING_DINERS
+log=
+Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit
+Copyright (c) Informatica Corporation 1994 - 2014
+All Rights Reserved.
+
+Invoked at Fri Oct 21 13:37:09 2016
+
+Connected to Integration Service: [INT_CIELO_HOM].
+Starting workflow [wf_CIELO_BOB_CLR_RET_INCOMING_DINERS]
+Waiting for workflow [wf_CIELO_BOB_CLR_RET_INCOMING_DINERS] to complete
+ERROR: Workflow [wf_CIELO_BOB_CLR_RET_INCOMING_DINERS]: Execution failed.  Please check the workflow log for more information.
+Disconnecting from Integration Service
+
+Completed at Fri Oct 21 13:38:01 2016
++ + awk /ailed/,/^$/
++ echo Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 - 201\
+4 All Rights Reserved. Invoked at Fri Oct 21 13:37:09 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow [wf\
+_CIELO_BOB_CLR_RET_INCOMING_DINERS] Waiting for workflow [wf_CIELO_BOB_CLR_RET_INCOMING_DINERS] to complete ERROR: Workflow [wf_CIE\
+LO_BOB_CLR_RET_INCOMING_DINERS]: Execution failed. Please check the workflow log for more information. Disconnecting from Integrati\
+on Service Completed at Fri Oct 21 13:38:01 2016
+msg_failed=Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 -\
+ 2014 All Rights Reserved. Invoked at Fri Oct 21 13:37:09 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow\
+ [wf_CIELO_BOB_CLR_RET_INCOMING_DINERS] Waiting for workflow [wf_CIELO_BOB_CLR_RET_INCOMING_DINERS] to complete ERROR: Workflow [wf\
+_CIELO_BOB_CLR_RET_INCOMING_DINERS]: Execution failed. Please check the workflow log for more information. Disconnecting from Integ\
+ration Service Completed at Fri Oct 21 13:38:01 2016
++ + awk /ERROR/,/^$/
++ echo Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 - 201\
+4 All Rights Reserved. Invoked at Fri Oct 21 13:37:09 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow [wf\
+_CIELO_BOB_CLR_RET_INCOMING_DINERS] Waiting for workflow [wf_CIELO_BOB_CLR_RET_INCOMING_DINERS] to complete ERROR: Workflow [wf_CIE\
+LO_BOB_CLR_RET_INCOMING_DINERS]: Execution failed. Please check the workflow log for more information. Disconnecting from Integrati\
+on Service Completed at Fri Oct 21 13:38:01 2016
+msg_error=Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 - \
+2014 All Rights Reserved. Invoked at Fri Oct 21 13:37:09 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow \
+[wf_CIELO_BOB_CLR_RET_INCOMING_DINERS] Waiting for workflow [wf_CIELO_BOB_CLR_RET_INCOMING_DINERS] to complete ERROR: Workflow [wf_\
+CIELO_BOB_CLR_RET_INCOMING_DINERS]: Execution failed. Please check the workflow log for more information. Disconnecting from Integr\
+ation Service Completed at Fri Oct 21 13:38:01 2016
++ + awk /topped/,/^$/
++ echo Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 - 201\
+4 All Rights Reserved. Invoked at Fri Oct 21 13:37:09 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow [wf\
+_CIELO_BOB_CLR_RET_INCOMING_DINERS] Waiting for workflow [wf_CIELO_BOB_CLR_RET_INCOMING_DINERS] to complete ERROR: Workflow [wf_CIE\
+LO_BOB_CLR_RET_INCOMING_DINERS]: Execution failed. Please check the workflow log for more information. Disconnecting from Integrati\
+on Service Completed at Fri Oct 21 13:38:01 2016
+msg_stop=
++ + awk /bort/,/^$/
++ echo Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 - 201\
+4 All Rights Reserved. Invoked at Fri Oct 21 13:37:09 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow [wf\
+_CIELO_BOB_CLR_RET_INCOMING_DINERS] Waiting for workflow [wf_CIELO_BOB_CLR_RET_INCOMING_DINERS] to complete ERROR: Workflow [wf_CIE\
+LO_BOB_CLR_RET_INCOMING_DINERS]: Execution failed. Please check the workflow log for more information. Disconnecting from Integrati\
+on Service Completed at Fri Oct 21 13:38:01 2016
+msg_abort=
++ MsgExec Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Copyright (c) Informatica Corporation 1994 - \
+2014 All Rights Reserved. Invoked at Fri Oct 21 13:37:09 2016 Connected to Integration Service: [INT_CIELO_HOM]. Starting workflow \
+[wf_CIELO_BOB_CLR_RET_INCOMING_DINERS] Waiting for workflow [wf_CIELO_BOB_CLR_RET_INCOMING_DINERS] to complete ERROR: Workflow [wf_\
+CIELO_BOB_CLR_RET_INCOMING_DINERS]: Execution failed. Please check the workflow log for more information. Disconnecting from Integr\
+ation Service Completed at Fri Oct 21 13:38:01 2016 Informatica(r) PMCMD, version [9.5.1 HotFix4], build [313.0217], AIX 64-bit Cop\
+yright (c) Informatica Corporation 1994 - 2014 All Rights Reserved. Invoked at Fri Oct 21 13:37:09 2016 Connected to Integration Se\
+rvice: [INT_CIELO_HOM]. Starting workflow [wf_CIELO_BOB_CLR_RET_INCOMING_DINERS] Waiting for workflow [wf_CIELO_BOB_CLR_RET_INCOMIN\
+G_DINERS] to complete ERROR: Workflow [wf_CIELO_BOB_CLR_RET_INCOMING_DINERS]: Execution failed. Please check the workflow log for m\
+ore information. Disconnecting from Integration Service Completed at Fri Oct 21 13:38:01 2016
+-------------------------------------------------------------------------------------------
+Execution failed. Please check the workflow log for more information.
+Final de Execucao :  21/10/2016 13:38:01
+-------------------------------------------------------------------------------------------
