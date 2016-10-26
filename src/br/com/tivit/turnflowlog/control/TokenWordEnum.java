@@ -66,15 +66,10 @@ public enum TokenWordEnum {
 	COMPLETE("complete");
 	
 	
-	
-	
-	
-	
-
-	public String keyValue;
+	public String getToken;
 
 	TokenWordEnum(String value) {
-		keyValue = value;
+		getToken = value;
 	}
 
 }
